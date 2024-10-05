@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F5F5F5;
+      color: #333333;
+    }
+
+    .container-fluid {
+      padding: 0;
+    }
+
+    header {
+      background-color: #4A90E2;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      color: #FFFFFF;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    header nav a {
+      color: #FFFFFF;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .cta-button {
+      background-color: transparent;
+      border: 2px solid white;
+      border-radius: 5px;
+      padding: 8px 16px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .cta-button:hover {
+      background-color: white;
+      color: darkgreen;
+    }
+
+    .heading h1 {
+      text-align: center;
+      font-size: 36px;
+      margin: 50px 0;
+      color: #333;
+    }
+
+    .fst_sec {
+      margin-bottom: 50px;
+      padding: 0 20px;
+    }
+
+    .content-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+      padding: 0 20px;
+    }
+
+    .content-row img {
+      width: 35%; /* Reduced from 45% */
+      border-radius: 8px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    /* Specific CSS for the last two images */
+    .content-row:nth-of-type(6) img, 
+    .content-row:nth-of-type(7) img {
+      width: 30%; /* Even smaller for the last two sections */
+    }
+
+    .content-row div {
+      width: 50%;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    footer {
+            background-color: #333333;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+        }
+
+    /* For mobile responsiveness */
+    @media (max-width: 768px) {
+      .content-row {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .content-row img,
+      .content-row div {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="first.html" class="logo">ReviewBot</a>
+    <nav>
+      <a href="first.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="howitworks.html">How It Works</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="cta-button">Login</a>
+    </nav>
+  </header>
+
+  <div class="container-fluid">
+    <div class="heading">
+      <h1>How It Works</h1>
+    </div>
+
+    <section class="fst_sec">
+      <div class="content-row">
+        <div>
+          <h2>Login & Personalization</h2>
+          <p>You can browse the site freely or choose to log in for a personalized experience. By logging in, the website
+            better understands your preferences and tailors product recommendations, reviews, and comparisons to meet
+            your unique needs.</p>
+        </div>
+        <img
+          src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=740&t=st=1726644105~exp=1726644705~hmac=6fe5bd65cc91d07703c63f719693e8443ec7aa1c8f610fba50d72cc54b966bbd"
+          alt="Login Process">
+      </div>
+
+      <div class="content-row">
+        <img
+          src="chatbotinteraction.jpg"
+          alt="Chatbot Interaction">
+        <div>
+          <h2>Interactive Chatbot for Recommendations</h2>
+          <p>Our intelligent chatbot uses advanced Natural Language Processing (NLP) to engage in conversations, helping
+            you find the perfect products. Whether you need recommendations, product comparisons, or just have
+            questions, the chatbot is always ready to assist.</p>
+        </div>
+      </div>
+
+      <div class="content-row">
+        <div>
+          <h2>Real-Time Comparisons</h2>
+          <p>With just a few clicks or chatbot commands, you can compare product prices, ratings, and reviews across
+            multiple websites in real-time. This feature ensures you find the best deals and make informed decisions.</p>
+        </div>
+        <img
+          src="https://cdn.prod.website-files.com/5e42772e6a8cfd42a9715206/659bb6465301acb6d7c94673_Feature_Chatbot-Examples-Article-Update%20(1).jpg"
+          alt="Real-Time Comparison">
+      </div>
+
+      <div class="content-row">
+        <img
+          src="https://media.gettyimages.com/id/1499457607/photo/chatbot-icon-on-the-digital-futuristic-blue-wavy-background-3d-illustration-with-bright.jpg?s=612x612&w=0&k=20&c=15d8o70cFxRJLr0JxqcZ8sweL1z_0xvcCuEqL-fclCM="
+          alt="Sentiment Analysis">
+        <div>
+          <h2>Sentiment Analysis for Trusted Reviews</h2>
+          <p>To ensure trust in product reviews, we use sentiment analysis to filter out biased reviews. This
+            helps you rely on authentic feedback when making purchasing decisions.</p>
+        </div>
+      </div>
+
+      <div class="content-row">
+        <div>
+          <h2>Add and Compare Reviews</h2>
+          <p>You can leave your own reviews and ratings for products you've purchased. Compare your feedback with others
+            to get a comprehensive understanding of a product’s quality before buying.</p>
+        </div>
+        <img
+          src="https://media.gettyimages.com/id/1487637166/photo/ai-chatbot-usage-artificial-intelligence-chat-bot-concept.jpg?s=612x612&w=0&k=20&c=Xxt2ty04hQBFZoF_JOv4RsxiRW2pUqJ_MMFZcYXCNEY="
+          alt="Adding and Comparing Reviews">
+      </div>
+
+      <div class="content-row">
+        <img
+          src="https://images.unsplash.com/photo-1508882100003-8ae16a4abbaf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWFjaGluZSUyMGxlYXJuaW5nfGVufDB8fDB8fHww"
+          alt="Machine Learning Personalization"
+          style="width: 30%; height: 400px; object-fit: cover;"> <!-- Added height and object-fit -->
+        <div>
+          <h2>Machine Learning-Powered Personalization</h2>
+          <p>Our platform uses Machine Learning to refine recommendations based on your browsing and purchasing behavior.
+            The more you interact, the more personalized and accurate the product suggestions become.</p>
+        </div>
+      </div>
+      
+      <div class="content-row">
+        <div>
+          <h2>Making a Purchase</h2>
+          <p>After finding the product that fits your needs, you can proceed to purchase it from the site offering the
+            best deal. The choice is always in your hands, ensuring you get the best value.</p>
+        </div>
+        <img
+          src="https://plus.unsplash.com/premium_photo-1664202219850-0ed2a085aaa9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHB1cmNoYXNlfGVufDB8fDB8fHww"
+          alt="Making a Purchase"
+          style="width: 30%; height: 400px; object-fit: cover;"> <!-- Added height and object-fit -->
+      </div>
+      
+      
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 ChatReview. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

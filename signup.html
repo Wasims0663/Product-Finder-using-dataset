@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Bot - Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/7552326/pexels-photo-7552326.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 50px;
+        }
+
+        .signup-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn-signup {
+            background-color: #007bff;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Sign Up</h1>
+        <input type="text" id="name" placeholder="Enter Full Name" required>
+        <input type="text" id="mobile" placeholder="Enter Mobile Number" required>
+        <input type="email" id="email" placeholder="Enter Email ID" required>
+        <input type="text" id="userid" placeholder="Create User ID" required>
+        <input type="password" id="password" placeholder="Create Password" required>
+        <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+        <button class="btn btn-signup" onclick="signup()">Sign Up</button>
+        <p id="error" class="error-message"></p>
+    </div>
+
+    <script>
+        function signup() {
+            const name = document.getElementById('name').value;
+            const mobile = document.getElementById('mobile').value;
+            const email = document.getElementById('email').value;
+            const userId = document.getElementById('userid').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const error = document.getElementById('error');
+
+            if (password !== confirmPassword) {
+                error.textContent = 'Passwords do not match!';
+                return;
+            }
+
+            // Store user data in localStorage
+            const user = {
+                name: name,
+                mobile: mobile,
+                email: email,
+                userId: userId,
+                password: password
+            };
+            localStorage.setItem(userId, JSON.stringify(user));
+
+            alert('Signup successful! You can now log in.');
+            window.location.href = 'Login.html';  // Redirect to login page
+        }
+    </script>
+</body>
+</html>

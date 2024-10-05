@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Bot - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/7552326/pexels-photo-7552326.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 50px;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn-login {
+            background-color: #28a745;
+            margin-top: 10px;
+        }
+
+        .btn-signup {
+            background-color: #007bff;
+            margin-top: 10px;
+        }
+
+        .btn-no-login {
+            background-color: #ff6347;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Review Bot</h1>
+        
+        <!-- Login Form -->
+        <form id="loginForm">
+            <input type="text" name="username" id="username" placeholder="Enter Username" required>
+            <input type="password" name="password" id="password" placeholder="Enter Password" required>
+            <button class="btn btn-login" type="submit">Login</button>
+        </form>
+        
+        <button class="btn btn-signup" onclick="redirectToSignup()">Sign Up</button>
+        <button class="btn btn-no-login" onclick="noLogin()">Go Ahead Without Login</button>
+        <p id="error" class="error-message"></p>
+    </div>
+
+    <script>
+        // Handle form submission for login
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get form data
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Fetch the stored user from localStorage
+            const storedUser = localStorage.getItem(username);
+
+            if (storedUser) {
+                const userData = JSON.parse(storedUser);
+                if (userData.password === password) {
+                    alert('Login successful!');
+                    window.location.href = "first.html"; // Redirect to the home page
+                } else {
+                    document.getElementById('error').textContent = 'Invalid username or password!';
+                }
+            } else {
+                document.getElementById('error').textContent = 'User not found!';
+            }
+        });
+
+        // Redirect to Signup Page
+        function redirectToSignup() {
+            window.location.href = 'SignUp.html'; // Redirect to signup page
+        }
+
+        // Go ahead without login
+        function noLogin() {
+            alert('You are proceeding without logging in...');
+            window.location.href = "first.html"; // Redirect to home page
+        }
+    </script>
+</body>
+</html>

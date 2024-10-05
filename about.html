@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About ChatReview</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F5F5F5;
+      color: #333333;
+    }
+
+    .container-fluid {
+      padding: 0;
+    }
+
+    header {
+      background-color: #4A90E2;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      color: #FFFFFF;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    header nav a {
+      color: #FFFFFF;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .cta-button {
+      background-color: transparent;
+      border: 2px solid white;
+      border-radius: 5px;
+      padding: 8px 16px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .cta-button:hover {
+      background-color: white;
+      color: darkgreen;
+    }
+
+    .heading h1 {
+      text-align: center;
+      font-size: 36px;
+      margin: 50px 0;
+      color: #333;
+    }
+
+    .fst_sec {
+      margin-bottom: 50px;
+      padding: 0 20px;
+    }
+
+    .content-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+      padding: 0 20px;
+    }
+
+    .content-row img {
+      width: 45%;
+      border-radius: 8px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .content-row div {
+      width: 50%;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    
+
+    footer {
+            background-color: #333333;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+        }
+
+    /* For mobile responsiveness */
+    @media (max-width: 768px) {
+      .content-row {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .content-row img,
+      .content-row div {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    .carousel-item img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="first.html" class="logo">ReviewBot</a>
+    <nav>
+      <a href="first.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="howitworks.html">How It Works</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="cta-button">Login</a>
+    </nav>
+  </header>
+
+  <div class="container-fluid">
+    <div class="heading">
+      <h1>About ChatReview</h1>
+    </div>
+
+    <section class="fst_sec">
+      <div class="content-row">
+        <div>
+          <h2>Our Vision</h2>
+          <p>ChatReview is a cutting-edge platform designed to simplify online shopping with product comparisons,
+            real-time reviews, and AI-powered recommendations. Our mission is to provide users with the best tools to
+            make informed purchasing decisions. We combine the latest technology with user-friendly design to offer a
+            seamless shopping experience.</p>
+        </div>
+        <img
+          src="https://img.freepik.com/free-vector/cute-bot-say-users-hello-chatbot-greets-online-consultation_80328-195.jpg?size=626&ext=jpg"
+          alt="AI Chatbot Demonstration">
+      </div>
+
+      <div class="content-row">
+        <img src="https://media.istockphoto.com/id/1603182869/vector/manager-providing-constructive-feedback-vector-illustration.jpg?s=612x612&w=0&k=20&c=GeWTkyjiQUUQ5NzAaN1XFhTJzwPeUavk4i73wsiws2k=">
+        <div>
+          <h2>Our Mission</h2>
+          <p>At ChatReview, our mission is clear: to simplify decision-making for online shoppers by delivering
+            personalized, real-time insights. Our platform empowers you with tools to make informed choices while
+            reducing the time spent searching for the perfect product. Whether you're browsing for the best price,
+            specific features, or products that align with your values, ChatReview guides you every step of the way.</p>
+        </div>
+      </div>
+
+      <div class="content-row">
+        <div>
+          <h2>Our Story</h2>
+          <p>Our vision goes beyond just creating a comparison site. ChatReview aims to set new standards in e-commerce
+            by fusing innovation, convenience, and responsibility. As we evolve, we remain committed to helping you make
+            smarter, more sustainable purchasing decisions that align with both your needs and your values.</p>
+        </div>
+        <img
+          src="https://t3.ftcdn.net/jpg/05/21/25/06/240_F_521250682_4XjZRldZP414LcCyQBRQAioC73oYmgbG.jpg"
+          alt="Customer Satisfaction Focus">
+      </div>
+    </section>
+
+    <!-- Team Carousel Section -->
+    <h1 class="text-center mb-5">Meet Our Team</h1>
+    <section>
+        <div id="carouselExampleControls" class="carousel slide text-center carousel-dark" data-ride="carousel" data-interval="3000">
+          <div class="carousel-inner">
+            
+            <!-- First Slide -->
+            <div class="carousel-item active">
+              <img class="rounded-circle shadow-1-strong mb-4"
+                src="prathhammm.jpeg" alt="Ashok Prasad" style="width: 200px; height: 200px; object-fit: cover;" />
+              <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                  <h5 class="mb-3">Pratham Verma</h5>
+                  <p>Chatbot Integration Specialist</p>
+                  <p>
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Pratham is a final-year student in Computer Science and Technology with a specialization in Information Security. He initiated and laid the foundation for the chatbot integration, 
+                    ensuring a smooth implementation process for the project.
+
+                  </p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Second Slide -->
+            <div class="carousel-item">
+              <img class="rounded-circle shadow-1-strong mb-4"
+                src="snehh.jpeg" alt="Anurag Chaudhary" style="width: 200px; height: 200px; object-fit: cover;" />
+              <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                  <h5 class="mb-3">Sneh Jain</h5>
+                  <p>Full Stack Developer</p>
+                  <p>
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Sneh Jain is a final-year Computer Science and Technology student who assisted with the technical aspects of the project. Her primary focus is on writing the research paper that documents and analyzes the work and achievements of the project.
+                  </p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Third Slide -->
+            <div class="carousel-item">
+              <img class="rounded-circle shadow-1-strong mb-4"
+                src="wasimsiddiquiiii.jpeg" alt="Wasim Siddiqui" style="width: 200px; height: 200px; object-fit: cover;" />
+              <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                  <h5 class="mb-3">Wasim</h5>
+                  <p>Full Stack Developer</p>
+                  <p>
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Wasim is a final year of Computer Science and Technology. He took charge of most of the technical work, handling the design and backend development of the website, playing a crucial role in the projects success.
+                  </p>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          
+          <!-- Carousel Controls -->
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </section>
+      
+      
+      <!-- Ensure you include the Bootstrap JS and dependencies for carousel functionality -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2024 ChatReview. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
