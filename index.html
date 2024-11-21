@@ -2,143 +2,213 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Comparison Search</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F5F5F5;
-            color: #333333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Comparison Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F5F5F5;
+      color: #333333;
+    }
 
-        .container-fluid {
-            padding: 0;
-        }
+    header {
+      background-color: #4A90E2;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        header {
-            background-color: #4A90E2;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    header .logo {
+      color: #FFFFFF;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-        header .logo {
-            color: #FFFFFF;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
+    header nav a {
+      color: #FFFFFF;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-        header nav a {
-            color: #FFFFFF;
-            margin-left: 20px;
-            text-decoration: none;
-            font-weight: 500;
-        }
+    .cta-button {
+      background-color: transparent;
+      border: 2px solid white;
+      border-radius: 5px;
+      padding: 8px 16px;
+      font-weight: 700;
+      color: white;
+    }
 
-        .cta-button {
-            background-color: transparent;
-            border: 2px solid white;
-            border-radius: 5px;
-            padding: 8px 16px;
-            font-weight: 700;
-            color: white;
-        }
+    .cta-button:hover {
+      background-color: white;
+      color: darkgreen;
+    }
 
-        .cta-button:hover {
-            background-color: white;
-            color: darkgreen;
-        }
+    main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height to fill the viewport */
+  padding: 0; /* Remove any additional padding */
+  margin: 0;
+  text-align: center;
+}
 
-        main {
-            text-align: center;
-            padding: 40px 20px;
-        }
 
-        .search-section h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #333;
-        }
+    #chat-container {
+      width: 80%;
+      max-width: 600px;
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-        .search-section input,
-        .search-section button {
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 16px;
-            width: 50%;
-        }
+    #messages {
+      height: 300px;
+      overflow-y: auto;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-top: 1px solid #e1e1e1;
-        }
+    #input-container {
+      display: flex;
+      gap: 10px;
+    }
 
-        footer p {
-            margin: 0;
-            color: #333;
-        }
+    input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
 
-        /* For mobile responsiveness */
-        @media (max-width: 768px) {
-            .search-section input,
-            .search-section button {
-                width: 80%;
-            }
-        }
-    </style>
+    button {
+      padding: 10px 15px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-top: 1px solid #e1e1e1;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <a href="first.html" class="logo">ReviewBot</a>
-        <nav>
-            <a href="first.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="howitworks.html">How It Works</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html" class="cta-button">Login</a>
-        </nav>
-    </header>
+  <header>
+    <a href="first.html" class="logo">ReviewBot</a>
+    <nav>
+      <a href="first.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="howitworks.html">How It Works</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="cta-button">Login</a>
+    </nav>
+  </header>
 
-    <main>
-        <section class="search-section">
-            <h1>Welcome to our Chatbot - Search for What You Need, Quickly and Easily</h1>
-            <input type="text" id="search-input" placeholder="Search for gadgets, fashion, etc.">
-            <button id="search-button">Search</button>
-            <div id="results"></div>
-        </section>
-    </main>
+  <main>
+    <div id="chat-container">
+      <div id="messages"></div>
+      <div id="input-container">
+        <input type="text" id="user-input" placeholder="Search for a product...">
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </main>
+  
 
-    <footer>
-        <p>&copy; 2024 ReviewBot. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 ReviewBot. All rights reserved.</p>
+  </footer>
 
-    <script>
-        document.getElementById('search-button').addEventListener('click', async () => {
-            const query = document.getElementById('search-input').value;
-            const response = await fetch(`/search?q=${encodeURIComponent(query)}`);
-            const results = await response.json();
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = '';
-            results.forEach(item => {
-                const resultItem = document.createElement('div');
-                resultItem.innerHTML = `
-                    <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
-                    <p>${item.snippet}</p>
-                    <a href="${item.displayLink}" target="_blank">${item.displayLink}</a>
-                `;
-                resultsDiv.appendChild(resultItem);
-            });
+  <script>
+    const messagesDiv = document.getElementById('messages');
+    const userInput = document.getElementById('user-input');
+    const sendBtn = document.getElementById('send-btn');
+
+    const displayMessage = (message, isBot = false) => {
+      const msgDiv = document.createElement('div');
+      msgDiv.style.margin = '10px 0';
+      msgDiv.style.padding = '10px';
+      msgDiv.style.borderRadius = '8px';
+      msgDiv.style.background = isBot ? '#f0f0f0' : '#d4f8e8';
+      msgDiv.style.alignSelf = isBot ? 'flex-start' : 'flex-end';
+      msgDiv.innerText = message;
+
+      messagesDiv.appendChild(msgDiv);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight; // Scroll to bottom
+    };
+
+    const fetchProducts = async (query) => {
+      displayMessage(`Searching for "${query}"...`, true);
+      try {
+        const response = await fetch('http://localhost:3000/search', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query }),
         });
-    </script>
+        const data = await response.json();
+
+        if (data.error) {
+          displayMessage('Failed to fetch product data.', true);
+          return;
+        }
+
+        const cheapest = data.cheapest;
+        const products = data.products;
+
+        displayMessage(`Cheapest product: ${cheapest.name} at ₹${cheapest.price} from ${cheapest.store}`, true);
+
+        displayMessage('Other products:', true);
+        products.forEach((product, index) => {
+          displayMessage(`${index + 1}. ${product.name} - ₹${product.price} from ${product.store}`, true);
+        });
+      } catch (error) {
+        console.error('Error fetching products:', error);
+        displayMessage('An error occurred while fetching product data.', true);
+      }
+    };
+
+    sendBtn.addEventListener('click', () => {
+      const query = userInput.value.trim();
+      if (query) {
+        displayMessage(query);
+        fetchProducts(query);
+        userInput.value = '';
+      }
+    });
+
+    userInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        sendBtn.click();
+      }
+    });
+  </script>
 </body>
 
 </html>
